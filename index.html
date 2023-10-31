@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+    <form>
+      <label class="field">
+        <span class="field__text">Label <span class="field__reg">*</span></span>
+
+        <input
+          type="text"
+          required
+          placeholder="Enter you name"
+          class="field__input"
+        />
+      </label>
+      <label class="field">
+        <span class="field__text">Textarea</span
+        ><textarea
+          class="field__textarea"
+          placeholder="Enter your text"
+        ></textarea>
+      </label>
+
+      <label class="field">
+        <span class="field__text">Select</span>
+        <select class="field__select">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </label>
+      <div class="row">
+        <label class="chk">
+          <input class="chk__input" type="checkbox" />
+          <span class="chk__check"></span>
+          <span class="chk__text">Item</span>
+        </label>
+
+        <label class="chk">
+          <input class="chk__input" type="checkbox" />
+          <span class="chk__check"></span>
+          <span class="chk__text">Item</span>
+        </label>
+
+        <label class="radio">
+          <input class="radio__input" name="user" type="radio" />
+          <span class="radio__check"></span>
+          <span class="radio__text">Item</span>
+        </label>
+
+        <label class="radio">
+          <input class="radio__input" name="user" type="radio" />
+          <span class="radio__check"></span>
+          <span class="radio__text">Item</span>
+        </label>
+
+        <label class="switch">
+          <input class="switch__input" type="checkbox" />
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+      <button>Send</button>
+    </form>
+  </body>
+</html>

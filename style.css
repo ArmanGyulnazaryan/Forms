@@ -1,0 +1,230 @@
+* {
+  font-family: "Edu TAS Beginner", cursive, sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 50px;
+}
+body {
+  padding: 50px;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.field {
+  display: block;
+  margin-bottom: 10px;
+}
+.field.is-disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.field__text {
+  color: #6f7482;
+
+  font-size: 16px;
+
+  font-weight: 400;
+  line-height: 144%;
+  letter-spacing: 0.16px;
+  margin-bottom: 2px;
+}
+.field__reg {
+  color: #ed0131;
+}
+
+.field__input {
+  display: block;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  border-radius: 4px;
+  background: #f8fafc;
+  padding: 12px;
+  color: #3b4256;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 144%;
+  letter-spacing: 0.16px;
+  border: 1px solid transparent;
+  transition: 0.2s all ease-in;
+}
+.field__input::placeholder {
+  color: #b8bcca;
+}
+
+.field__input:focus {
+  border-color: #0048d9;
+}
+
+.field__textarea {
+  display: block;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 12px;
+  border-radius: 4px;
+  background: #f8fafc;
+  min-height: 139px;
+  max-height: 300px;
+  resize: vertical;
+}
+.field__select {
+  display: block;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 12px;
+  border-radius: 4px;
+  background: #f8fafc;
+  resize: vertical;
+}
+
+.chk {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px;
+}
+.chk__input {
+  display: none;
+}
+.chk__input:checked ~ .chk__check {
+  background: #3b4256;
+}
+.chk__input:checked ~ .chk__check::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.chk__check {
+  width: 21px;
+  height: 21px;
+  border: 2px solid #3b4256;
+  border-radius: 4px;
+  background: transparent;
+  transition: 0.2s all ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chk__text {
+  color: #3b4256;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.chk__check::before {
+  content: "\2713";
+  color: #f8fafc;
+  opacity: 0;
+  transition: 0.2s all ease-in;
+}
+
+.radio {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px;
+}
+.radio__input {
+  display: none;
+}
+
+.radio__input:checked ~ .radio__check::before {
+  opacity: 1;
+  transform: scale(1);
+}
+.radio__check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #3b4256;
+  border-radius: 50%;
+  background: transparent;
+  transition: 0.2s all ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.radio__text {
+  color: #3b4256;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.radio__check::before {
+  content: "";
+  background: #3b4256;
+  opacity: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.2s all ease-in;
+}
+
+button {
+  border: 0;
+  margin-top: 20px;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  padding: 15px 28px;
+  background: #09af20;
+  border-radius: 4px;
+}
+
+.btn.its-disabed {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  height: 31px;
+  width: 51px;
+  flex-shrink: 0;
+  opacity: 0.4;
+}
+.switch__input {
+  display: none;
+}
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: Grey;
+  border-radius: 16px;
+}
+.switch__slider::before {
+  position: absolute;
+  content: "";
+  width: 27px;
+  height: 27px;
+  left: 3px;
+  bottom: 2px;
+  top: 2px;
+  border-radius: 24px;
+  background-color: #e2e7ed;
+  transition: 0.3s all ease-in;
+}
+
+.switch__input:checked ~ .switch__slider {
+  background-color: #09af20;
+}
+
+.switch__slider:focus {
+  box-shadow: #e2e7ed;
+}
+.switch__input:checked ~ .switch__slider::before {
+  transform: translateX(19px);
+  transition: 0.3s all ease-in;
+}
